@@ -1,0 +1,388 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* ul {
+    list-style: none;
+}
+
+* input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+* input:focus {
+    border: 2px solid #00dfc4;
+    box-shadow: inset 1px 1px 2px #e4e4e4;
+    transition: .1s linear;
+}
+
+* button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.2s linear;
+    opacity: 1;
+    font-weight: 800;
+    color: whitesmoke;
+}
+
+* button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+* .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("./assets/images/1.jpg") no-repeat center/cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+* div::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}
+
+* div::-webkit-scrollbar-track {
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+* div::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.userClient {
+    width: 800px;
+    height: 600px;
+    background-color: #e4e4e4;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.95 !important;
+}
+
+.userClient .mainBottom {
+    width: 800px;
+    height: 550px;
+    display: flex;
+}
+
+.userClient .mainBottom .messageBox {
+    width: 600px;
+    height: 550px;
+}
+
+.userClient .mainBottom .messageBox .outputBox {
+    padding: 10px;
+    width: 100%;
+    height: 400px;
+    background-color: whitesmoke;
+    box-shadow: #ccdbe8 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    overflow-y: auto !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.userClient .mainBottom .messageBox .outputBox .messageBoxT {
+    width: 100%;
+    height: auto;
+}
+
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .selfOutput li,
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .otherOutput li {
+    width: 250px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .selfOutput li p,
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .otherOutput li p {
+    display: block;
+    max-width: 250px;
+    text-align: center;
+    line-height: 40px;
+    background-color: azure;
+    border-radius: 5px;
+    padding: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .selfOutput li img,
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .otherOutput li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .selfOutput {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .selfOutput li {
+    justify-content: flex-end;
+}
+
+.userClient .mainBottom .messageBox .outputBox .messageBoxT .otherOutput {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.userClient .mainBottom .messageBox .outputBox .bordercaseOutput {
+    width: 100%;
+}
+
+.userClient .mainBottom .messageBox .outputBox .bordercaseOutput p {
+    text-align: center;
+    color: #4e4e4e;
+}
+
+.userClient .mainBottom .messageBox .inputBox {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccdbe8;
+}
+
+.userClient .mainBottom .messageBox .inputBox .controlBtn {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.userClient .mainBottom .messageBox .inputBox .controlBtn button:hover {
+    background-color: #4e4e4e;
+    color: white;
+}
+
+.userClient .mainBottom .messageBox .inputBox .controlBtn button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.userClient .mainBottom .messageBox .inputBox textarea {
+    width: calc(100% - 6px);
+    height: 104px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 3px, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.userClient .mainBottom .userList {
+    width: 200px;
+    height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    background-color: #4e4e4e;
+    overflow-y: auto !important;
+}
+
+.userClient .mainBottom .userList ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.userClient .mainBottom .userList ul li {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    cursor: pointer;
+    transition: all linear 0.1s;
+    border-radius: 1px;
+}
+
+.userClient .mainBottom .userList ul li img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.userClient .mainBottom .userList ul li:nth-of-type(1) {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.userClient .mainBottom .userList ul li:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.userClient .clientTitle {
+    width: 800px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.userClient .clientTitle .clientTitleNumber {
+    width: 750px;
+    height: 50px;
+}
+
+.userClient .clientTitle .clientTitleNumber p {
+    text-align: center;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.userClient .clientTitle .close {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.userClient .clientTitle .close p {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all linear 0.1s;
+}
+
+.userClient .clientTitle .close p:hover {
+    background-color: white;
+    color: black;
+}
+
+.loginForm {
+    width: 600px;
+    background-color: #e4e4e4;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm .userNameInpt {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.loginForm .userNameInpt input {
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.loginForm .userIcon {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.loginForm .userIcon ul {
+    width: 100%;
+    height: 100%;
+    background-color: #e4e4e4;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm .userIcon ul li {
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.1s linear;
+}
+
+.loginForm .userIcon ul li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.loginForm .userIcon ul li p {
+    text-align: center;
+    margin-left: -10px;
+}
+
+.loginForm .userIcon ul li:hover {
+    transform: scale(1);
+}
